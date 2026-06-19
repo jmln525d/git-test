@@ -9,26 +9,25 @@ import org.springframework.stereotype.Service;
 import com.jsp.SpringBootCRUD.Dao.StudentDao;
 import com.jsp.SpringBootCRUD.Dto.ResponseStructure;
 import com.jsp.SpringBootCRUD.Dto.Student;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class StudentService {
 	
-	@Autowired
-	StudentDao studentDao;
-	
-//	save student
+	private final StudentDao studentDao;
+
+	public StudentService(StudentDao studentDao) {
+		this.studentDao = studentDao;
+	}
+
+	//	save student
 	public ResponseStructure<Student> saveStudent(Student student){
 		ResponseStructure<Student> responseStructure = new ResponseStructure<Student>();
 		Student student1 = studentDao.saveStudent(student);
-		if(student1 != null) {
+
 			responseStructure.setData(student1);
 			responseStructure.setStatusCode(HttpStatus.CREATED.value());
 			responseStructure.setMessage("Student saved successfully");
-		} else {
-			responseStructure.setData(null);
-			responseStructure.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-			responseStructure.setMessage("Student has failed to save");
-		}
 		return responseStructure;
 	}
 	

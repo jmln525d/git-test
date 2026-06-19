@@ -22,25 +22,25 @@ public class StudentController {
 	StudentService studentService;
 	
 	// save student
-	@PostMapping("/student")
+	@GetMapping("/student")
 	public ResponseStructure<Student> saveStudent(@RequestBody Student student){
 		return studentService.saveStudent(student);
 	}
 	
 	// get student by id
-	@GetMapping("/student/{id}")
+	@GetMapping("/studenty/{id}")
 	public ResponseStructure<Student> getStudentById(@PathVariable int id){
 		return studentService.getStudentById(id);
 	}
 	
 	// get all students
-	@GetMapping("/student")
+	@GetMapping("/studenty")
 	public ResponseStructure<List<Student>> getallStudent(){
 		return studentService.getAllStudent();
 	}
 	
 	// update student
-	@PutMapping("/student/{id}")
+	@PutMapping("/studenty/{id}")
 	public ResponseStructure<Student> updateStudent(@RequestBody Student student, @PathVariable Integer id){
 		return studentService.updateStudent(student, id);
 	}
