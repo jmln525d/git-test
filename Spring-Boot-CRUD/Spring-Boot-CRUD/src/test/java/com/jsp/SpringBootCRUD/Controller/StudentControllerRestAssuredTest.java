@@ -28,7 +28,7 @@ public class StudentControllerRestAssuredTest {
 
         student = new Student();
         student.setId(1);
-        student.setName("John Doe");
+        student.setFirstName("John Doe");
         student.setEmail("john@example.com");
     }
 
@@ -109,7 +109,7 @@ public class StudentControllerRestAssuredTest {
                 .extract().path("data.id");
 
         // Then update
-        student.setName("Test Name");
+        student.setFirstName("Test Name");
         given()
                 .contentType(ContentType.JSON)
                 .body(student)

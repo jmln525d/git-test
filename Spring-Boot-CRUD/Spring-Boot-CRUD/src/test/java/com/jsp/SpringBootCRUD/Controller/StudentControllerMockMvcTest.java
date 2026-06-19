@@ -1,7 +1,6 @@
 package com.jsp.SpringBootCRUD.Controller;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -48,7 +47,7 @@ public class StudentControllerMockMvcTest {
     void setUp() {
         student = new Student();
         student.setId(1);
-        student.setName("John Doe");
+        student.setFirstName("John Doe");
         student.setEmail("john@example.com");
 
         successResponse = new ResponseStructure<>();
@@ -225,7 +224,7 @@ public class StudentControllerMockMvcTest {
     void testSaveStudentWithInvalidEmail() throws Exception {
         Student invalidStudent = new Student();
         invalidStudent.setId(1);
-        invalidStudent.setName("John Doe");
+        invalidStudent.setFirstName("John Doe");
         invalidStudent.setEmail("invalid-email"); // Invalid email format
 
         ResponseStructure<Student> saveResponse = new ResponseStructure<>();
@@ -251,7 +250,7 @@ public class StudentControllerMockMvcTest {
     void testSaveStudentWithEmptyName() throws Exception {
         Student emptyNameStudent = new Student();
         emptyNameStudent.setId(1);
-        emptyNameStudent.setName(""); // Empty name
+        emptyNameStudent.setFirstName(""); // Empty name
         emptyNameStudent.setEmail("john@example.com");
 
         ResponseStructure<Student> saveResponse = new ResponseStructure<>();

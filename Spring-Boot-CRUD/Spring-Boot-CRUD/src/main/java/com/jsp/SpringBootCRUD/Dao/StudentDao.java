@@ -37,7 +37,7 @@ public class StudentDao {
 	public Student updateStudent(Student student, int id) {
 		Student existingstudent = getStudentById(id);
 		if(existingstudent != null) {
-			existingstudent.setName(student.getName());
+			existingstudent.setFirstName(student.getFirstName());
 			existingstudent.setEmail(student.getEmail());
 			return studentRepository.save(existingstudent);
 		} else return null;
