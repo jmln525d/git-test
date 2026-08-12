@@ -1,11 +1,15 @@
 package com.jsp.SpringBootCRUD.Dto;
 
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Service
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
