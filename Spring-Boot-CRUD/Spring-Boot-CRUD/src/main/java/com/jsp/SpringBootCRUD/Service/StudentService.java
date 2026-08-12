@@ -2,21 +2,18 @@ package com.jsp.SpringBootCRUD.Service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.jsp.SpringBootCRUD.Dao.StudentDao;
 import com.jsp.SpringBootCRUD.Dto.ResponseStructure;
 import com.jsp.SpringBootCRUD.Dto.Student;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class StudentService {
 	
-	private final StudentDao studentDao;
+	private final Student studentDao;
 
-	public StudentService(StudentDao studentDao) {
+	public StudentService(Student studentDao) {
 		this.studentDao = studentDao;
 	}
 
