@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 
 @Repository
-public interface StudentRepository extends JpaRepository<Student, BigDecimal> {
+public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 }
