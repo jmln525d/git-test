@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.jsp.Spring-Boot-CRUD' is invalid and this project uses 'com.jsp.SpringBootCRUD' instead.
+* The original package name 'com.jsp.Spring-Boot-CRUD' is invalid and this project uses 'com.jsp.springBootCRUD' instead.
 
 # Getting Started
 

@@ -1,7 +1,6 @@
-package com.jsp.SpringBootCRUD.Dto;
+package com.jsp.springBootCRUD.dto;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

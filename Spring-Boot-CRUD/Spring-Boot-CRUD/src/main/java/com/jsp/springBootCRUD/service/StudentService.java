@@ -1,12 +1,12 @@
-package com.jsp.SpringBootCRUD.Service;
+package com.jsp.springBootCRUD.service;
 
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.jsp.SpringBootCRUD.Dto.ResponseStructure;
-import com.jsp.SpringBootCRUD.Dto.Student;
+import com.jsp.springBootCRUD.dto.ResponseStructure;
+import com.jsp.springBootCRUD.dto.Student;
 
 @Service
 public class StudentService {

@@ -1,16 +1,16 @@
-package com.jsp.SpringBootCRUD.Dto;
+package com.jsp.springBootCRUD.dto;
 
 public class ResponseStructure <T> {
 	
-	private int statusCode;
+	private Long statusCode;
 	private String message;
 	private T data;
 	
 	public int getStatusCode() {
-		return statusCode;
+		return Math.toIntExact(statusCode);
 	}
 	public void setStatusCode(int statusCode) {
-		this.statusCode = statusCode;
+		this.statusCode = (long) statusCode;
 	}
 	public String getMessage() {
 		return message;
