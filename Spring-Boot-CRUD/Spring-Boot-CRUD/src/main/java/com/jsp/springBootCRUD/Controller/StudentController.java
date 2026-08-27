@@ -1,4 +1,4 @@
-package com.jsp.springBootCRUD.Controller;
+package com.jsp.SpringBootCRUD.Controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jsp.springBootCRUD.dto.ResponseStructure;
-import com.jsp.springBootCRUD.dto.Student;
-import com.jsp.springBootCRUD.service.StudentService;
+import com.jsp.SpringBootCRUD.Dto.ResponseStructure;
+import com.jsp.SpringBootCRUD.Dto.Student;
+import com.jsp.SpringBootCRUD.Service.StudentService;
 
 @RestController
 public class StudentController {
@@ -21,14 +21,14 @@ public class StudentController {
 	StudentService studentService;
 	
 	// save student
-	@GetMapping("/studentadv")
+	@GetMapping("/studentDTO")
 	public ResponseStructure<Student> saveStudent(@RequestBody Student student){
 		return studentService.saveStudent(student);
 	}
 	
 	// get student by id
 	@GetMapping("/studenty/{id}")
-	public ResponseStructure<Student> getStudentById(@PathVariable int id){
+	public ResponseStructure<Student> getStudentById(@PathVariable Integer id){
 		return studentService.getStudentById(id);
 	}
 	
