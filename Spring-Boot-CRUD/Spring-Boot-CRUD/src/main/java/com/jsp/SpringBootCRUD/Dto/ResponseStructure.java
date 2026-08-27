@@ -1,8 +1,8 @@
 package com.jsp.SpringBootCRUD.Dto;
 
-public class ResponseStructure <T> {
+public class ResponseStructure<T> {
 	
-	private int statusCode;
+	private Integer statusCode;
 	private String message;
 	private T data;
 	
