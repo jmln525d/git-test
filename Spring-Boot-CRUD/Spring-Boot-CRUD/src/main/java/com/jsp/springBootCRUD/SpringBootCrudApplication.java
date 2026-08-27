@@ -1,4 +1,4 @@
-package com.jsp.SpringBootCRUD;
+package com.jsp.springBootCRUD;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

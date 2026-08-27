@@ -1,4 +1,4 @@
-package com.jsp.SpringBootCRUD;
+package com.jsp.springBootCRUD;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

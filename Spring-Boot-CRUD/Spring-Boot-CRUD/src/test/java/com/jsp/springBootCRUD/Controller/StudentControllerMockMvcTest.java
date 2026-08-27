@@ -1,4 +1,4 @@
-package com.jsp.SpringBootCRUD.Controller;
+package com.jsp.springBootCRUD.Controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -18,9 +18,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jsp.SpringBootCRUD.Dto.ResponseStructure;
-import com.jsp.SpringBootCRUD.Dto.Student;
-import com.jsp.SpringBootCRUD.Service.StudentService;
+import com.jsp.springBootCRUD.dto.ResponseStructure;
+import com.jsp.springBootCRUD.dto.Student;
+import com.jsp.springBootCRUD.service.StudentService;
 
 @WebMvcTest(StudentController.class)
 public class StudentControllerMockMvcTest {
